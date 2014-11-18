@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            border: 1px solid #000000;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption>Tags</caption>
+    <thead>
+    <th>Tag</th>
+    <th>Use</th>
+    <th>Misc</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td>em</td>
+        <td>used for emphasis</td>
+        <td>Semantic tag</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <td>&copy; W3</td>
+    <td>&copy; tags</td>
+    <td>&copy; asdf</td>
+    </tfoot>
+</table>
+
+<button id="btn_say_hello">Say Hello</button>
+<input type="text" id="message"/>
+<script>
+    document.getElementById('btn_say_hello').addEventListener('click', function () {
+
+        var div = document.createElement('div');
+        div.innerHTML = 'Hello Christina!';
+
+        var span = document.createElement('span');
+        span.innerHTML = document.getElementById('message').value;
+
+        div.appendChild(span);
+
+        document.body.appendChild(div);
+    });
+</script>
+
+<div>
+    Hello Christina!
+    <span>UI Development Course ... </span>
+</div>
+
+
+</body>
+</html>
+
